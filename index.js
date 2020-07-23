@@ -5,7 +5,7 @@ const lint = require('awesome-lint');
 
 Toolkit.run(tools => {
   const readmeFileName = tools.inputs.entry;
-  const contents = tools.getFile(readmeFileName);
+  const contents = tools.readFile(readmeFileName);
   
   lint(contents)
     .then(() => {
@@ -14,7 +14,7 @@ Toolkit.run(tools => {
     .catch(error => {
       tools.exit.failure(error.message)
     });
-}, {
+  }, {
   event: [
     'pull_request.opened',
     'pull_request.synchronize'
