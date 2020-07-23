@@ -1,0 +1,21 @@
+{
+  "version": "0.0.0",
+  "name": "awesome-lint-action",
+  "main": "index.js",
+  "scripts": {
+    "version": "conventional-changelog -i changelog.md -s -r 0 && git add changelog.md && git commit -m \"build: update changelog\"",
+    "test": "xo"
+  },
+  "dependencies": {
+    "actions-toolkit": "^5.0.0",
+    "awesome-lint": "^0.14.0",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^9.1.1",
+    "@commitlint/config-angular": "^9.1.1",
+    "conventional-changelog-cli": "^2.0.34",
+    "husky": "^4.2.5",
+    "xo": "^0.32.1"
+  }
+}
